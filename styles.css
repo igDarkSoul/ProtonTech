@@ -1,0 +1,394 @@
+.digit {
+  display: inline-block;
+  font-size: 200px;
+  color: rgba(0, 0, 0, 0.75);
+  height: 180px;
+  line-height: 1;
+}
+
+.time-part-wrapper {
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+}
+.time-part-wrapper:not(:last-child):after {
+  content: ":";
+  display: block;
+  width: 30px;
+  height: 230px;
+  position: absolute;
+  top: 0px;
+  right: -30px;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 200px;
+  line-height: 0.9;
+}
+
+.time-part {
+  width: 140px;
+  text-align: center;
+  height: 180px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -5px;
+  box-sizing: border-box;
+}
+.time-part .digit-wrapper {
+  animation-timing-function: cubic-bezier(1, 0, 1, 0);
+}
+.time-part.minutes.tens .digit-wrapper {
+  animation-name: minutes-tens;
+  animation-duration: 3600s;
+  animation-iteration-count: 1;
+}
+.time-part.minutes.ones .digit-wrapper {
+  animation-name: minutes-ones;
+  animation-duration: 600s;
+  animation-iteration-count: 6;
+}
+.time-part.seconds.tens .digit-wrapper {
+  animation-name: seconds-tens;
+  animation-duration: 60s;
+  animation-iteration-count: 60;
+}
+.time-part.seconds.ones .digit-wrapper {
+  animation-name: seconds-ones;
+  animation-duration: 10s;
+  animation-iteration-count: 360;
+}
+.time-part.hundredths.tens .digit-wrapper {
+  animation-name: hundredths-tens;
+  animation-duration: 1s;
+  animation-iteration-count: 3600;
+}
+.time-part.hundredths.ones .digit-wrapper {
+  animation-name: hundredths-ones;
+  animation-duration: 0.1s;
+  animation-iteration-count: 36000;
+}
+
+@keyframes minutes-tens {
+  0% {
+    transform: translateY(-180px);
+  }
+  16.66667% {
+    transform: translateY(-360px);
+  }
+  33.33333% {
+    transform: translateY(-540px);
+  }
+  50% {
+    transform: translateY(-720px);
+  }
+  66.66667% {
+    transform: translateY(-900px);
+  }
+  83.33333% {
+    transform: translateY(-1080px);
+  }
+}
+@keyframes minutes-ones {
+  0% {
+    transform: translateY(-180px);
+  }
+  10% {
+    transform: translateY(-360px);
+  }
+  20% {
+    transform: translateY(-540px);
+  }
+  30% {
+    transform: translateY(-720px);
+  }
+  40% {
+    transform: translateY(-900px);
+  }
+  50% {
+    transform: translateY(-1080px);
+  }
+  60% {
+    transform: translateY(-1260px);
+  }
+  70% {
+    transform: translateY(-1440px);
+  }
+  80% {
+    transform: translateY(-1620px);
+  }
+  90% {
+    transform: translateY(-1800px);
+  }
+}
+@keyframes seconds-tens {
+  0% {
+    transform: translateY(-180px);
+  }
+  16.66667% {
+    transform: translateY(-360px);
+  }
+  33.33333% {
+    transform: translateY(-540px);
+  }
+  50% {
+    transform: translateY(-720px);
+  }
+  66.66667% {
+    transform: translateY(-900px);
+  }
+  83.33333% {
+    transform: translateY(-1080px);
+  }
+}
+@keyframes seconds-ones {
+  0% {
+    transform: translateY(-180px);
+  }
+  10% {
+    transform: translateY(-360px);
+  }
+  20% {
+    transform: translateY(-540px);
+  }
+  30% {
+    transform: translateY(-720px);
+  }
+  40% {
+    transform: translateY(-900px);
+  }
+  50% {
+    transform: translateY(-1080px);
+  }
+  60% {
+    transform: translateY(-1260px);
+  }
+  70% {
+    transform: translateY(-1440px);
+  }
+  80% {
+    transform: translateY(-1620px);
+  }
+  90% {
+    transform: translateY(-1800px);
+  }
+}
+@keyframes hundredths-tens {
+  0% {
+    transform: translateY(-180px);
+  }
+  10% {
+    transform: translateY(-360px);
+  }
+  20% {
+    transform: translateY(-540px);
+  }
+  30% {
+    transform: translateY(-720px);
+  }
+  40% {
+    transform: translateY(-900px);
+  }
+  50% {
+    transform: translateY(-1080px);
+  }
+  60% {
+    transform: translateY(-1260px);
+  }
+  70% {
+    transform: translateY(-1440px);
+  }
+  80% {
+    transform: translateY(-1620px);
+  }
+  90% {
+    transform: translateY(-1800px);
+  }
+}
+@keyframes hundredths-ones {
+  0% {
+    transform: translateY(-180px);
+  }
+  10% {
+    transform: translateY(-360px);
+  }
+  20% {
+    transform: translateY(-540px);
+  }
+  30% {
+    transform: translateY(-720px);
+  }
+  40% {
+    transform: translateY(-900px);
+  }
+  50% {
+    transform: translateY(-1080px);
+  }
+  60% {
+    transform: translateY(-1260px);
+  }
+  70% {
+    transform: translateY(-1440px);
+  }
+  80% {
+    transform: translateY(-1620px);
+  }
+  90% {
+    transform: translateY(-1800px);
+  }
+}
+body {
+  margin: 0;
+  font-family: "Aldrich";
+  background-image:url("https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg");
+  background-repeat:no-repeat;
+  background-size:100% 800px;
+}
+.wrapper {
+  margin: 100px auto;
+  width: 1000px;
+  position: relative;
+  
+}
+.wrapper:before, .wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 20px;
+  z-index: 10;
+}
+.wrapper:before {
+  top: 0px;
+  background-size: 100%;
+}
+.wrapper:after {
+  bottom: 0px;
+  background-size: 100%;
+}
+
+.navbar{
+    background-color: rgba(0, 6, 20);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.panel {
+  max-width: 960px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 100%;
+}
+
+.pricing-table {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .pricing-table {
+    flex-direction: row;
+  }
+}
+
+.pricing-table  {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(255,255,255,0.024);
+}
+
+.pricing-plan {
+  border-bottom: 1px solid #e1f1ff;
+  padding: 25px;
+}
+
+.pricing-plan:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 900px) {
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    flex-basis: 100%;
+    padding: 25px 50px;
+  }
+
+  .pricing-plan:last-child {
+    border-right: none;
+  }
+  .panel {
+    flex-direction: row;
+  }
+}
+
+.pricing-img {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.pricing-header {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pricing-features {
+  color: #000614;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 50px 0 25px;
+}
+
+.pricing-features-item {
+  border-top: 1px solid #e1f1ff;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px 0;
+  color: white;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+  color: #016FF9;
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.pricing-button {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #348EFE;
+  display: inline-block;
+  margin: 25px 0;
+  padding: 15px 35px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+  background-color: #48aaff;
+  color: #fff;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:active {
+  background-color: #269aff;
+}
+
+.card {
+  margin: 1em auto;
+}
